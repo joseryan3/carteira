@@ -1,5 +1,3 @@
-import org.gradle.kotlin.dsl.implementation
-
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
@@ -55,7 +53,4 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
-    implementation(libs.zxing.core)
-    implementation("androidx.compose.ui:ui-text-google-fonts:1.6.0")
-    implementation("androidx.navigation:navigation-compose:2.8.0-beta02")
 }
