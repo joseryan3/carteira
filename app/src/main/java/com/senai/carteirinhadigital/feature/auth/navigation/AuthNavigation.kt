@@ -1,17 +1,18 @@
 package com.senai.carteirinhadigital.feature.auth.navigation
 
 import androidx.compose.runtime.Composable
+import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import com.senai.carteirinhadigital.app.navigation.Routes
 import com.senai.carteirinhadigital.feature.auth.presentation.LoginScreen
 
 fun NavGraphBuilder.authScreen(
-    onNavigateToCarteirinha: () -> Unit
+    navController: NavController
 ) {
      composable(Routes.Login) {
         LoginScreen(
-            onLoginClick = onNavigateToCarteirinha
+            navController = navController
         )
     }
 }
