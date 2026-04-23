@@ -1,4 +1,4 @@
-package com.senai.carteirinhadigital
+package com.senai.carteirinhadigital.feature.carterinha.presentation
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -29,10 +29,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.senai.carteirinhadigital.ui.theme.CarteirinhaDigitalTheme
+import com.senai.carteirinhadigital.QrCode
+import com.senai.carteirinhadigital.R
+import com.senai.carteirinhadigital.core.designesystem.component.theme.CarteirinhaDigitalTheme
 
 @Composable
-fun CarterinhaScreen(modifier: Modifier = Modifier) {
+fun CarterinhaScreen(modifier: Modifier = Modifier,
+                     onBackClick: () -> Unit = {}) {
 
     Box(modifier = Modifier.fillMaxSize()) {
 

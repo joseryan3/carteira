@@ -1,13 +1,9 @@
-package com.senai.carteirinhadigital
+package com.senai.carteirinhadigital.feature.auth.presentation
 
-import android.R.attr.button
-import android.R.color.black
 import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
@@ -19,22 +15,16 @@ import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.Outline
-import androidx.compose.ui.graphics.Shadow
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.FontStyle
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
-import com.senai.carteirinhadigital.ui.theme.CarteirinhaDigitalTheme
-import com.senai.carteirinhadigital.ui.theme.outlineDark
+import com.senai.carteirinhadigital.core.designesystem.component.theme.CarteirinhaDigitalTheme
 
 @Composable
 
-fun LoginScreen(modifier: Modifier = Modifier) {
+fun LoginScreen(
+    onLoginClick: () -> Unit = {}
+) {
+
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
@@ -54,7 +44,7 @@ fun LoginScreen(modifier: Modifier = Modifier) {
             label = { Text("Senha") }
         )
         Button(
-            onClick = { },
+            onClick = onLoginClick,
             colors = ButtonDefaults.buttonColors(
                 containerColor = MaterialTheme.colorScheme.onError,
                 contentColor = MaterialTheme.colorScheme.inverseSurface
