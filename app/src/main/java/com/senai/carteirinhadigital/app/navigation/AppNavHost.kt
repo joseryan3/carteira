@@ -5,8 +5,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import com.senai.carteirinhadigital.feature.auth.navigation.authScreen
 import com.senai.carteirinhadigital.feature.carterinha.navigation.carterinhaScreen
-
-
+import com.senai.carteirinhadigital.feature.home.presentation.navigation.homeScreen
+import com.senai.carteirinhadigital.feature.home.presentation.screen.HomeScreen
 
 
 @Composable
@@ -25,5 +25,9 @@ fun AppNavHost() {
                 navController.navigate(Routes.Login)
             }
         )
+        homeScreen(
+            navController
+        )
+
     }
 }
