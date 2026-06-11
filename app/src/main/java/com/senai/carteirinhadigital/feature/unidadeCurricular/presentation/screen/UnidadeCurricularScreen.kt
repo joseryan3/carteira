@@ -2,12 +2,14 @@ package com.senai.carteirinhadigital.feature.unidadeCurricular.presentation.scre
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.navigation.NavController
 import com.senai.carteirinhadigital.feature.unidadeCurricular.presentation.data.dataSouce
 
 
 @Composable
 fun UnidadeCurricularScreen(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    navController: NavController
 ) {
     val unidadesCurriculares = dataSouce()
 

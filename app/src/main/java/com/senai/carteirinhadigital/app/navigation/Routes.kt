@@ -9,4 +9,6 @@ object Routes {
     const val Carteirinha = "carteirinha"
 
     const val TelaHome = "telahome"
+
+    const val unidadeCurricular ="unidade"
 }

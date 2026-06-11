@@ -39,9 +39,9 @@ fun LoginScreen(
     var erro by remember { mutableStateOf(false) }
 
     Column(
-        modifier = modifier.fillMaxSize(), // Usando o modifier passado por parâmetro
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = modifier.fillMaxSize(), // Faz a tela ocupar todo o espaço disponível
+        verticalArrangement = Arrangement.Center, // Centraliza os itens na vertical, ou seja, no meio da tela de cima para baixo
+        horizontalAlignment = Alignment.CenterHorizontally, // Centraliza os itens na horizontal, ou seja, no meio da tela da esquerda para direita
     ) {
         Text(
             text = "Login",
@@ -58,7 +58,8 @@ fun LoginScreen(
             },
             label = { Text("Login") },
             isError = erro,
-            singleLine = true
+            singleLine = true,
+
         )
 
         Spacer(modifier = Modifier.height(8.dp))
@@ -72,13 +73,14 @@ fun LoginScreen(
             label = { Text("Senha") },
             isError = erro,
             singleLine = true
+
         )
 
         // Exibe a mensagem de erro abaixo dos campos se 'erro' for true
         if (erro) {
             Text(
                 text = "E-mail ou senha incorretos",
-                color = MaterialTheme.colorScheme.error,
+                color = MaterialTheme.colorScheme.secondary,
                 style = MaterialTheme.typography.bodySmall
             )
         }
@@ -89,20 +91,20 @@ fun LoginScreen(
             onClick = {
                 if (login == "teste" && senha == "1234") {
                     erro = false
-                    navController.navigate(Routes.Carteirinha)
+                    navController.navigate(Routes.TelaHome)
                 } else {
                     erro = true
                 }
             },
             colors = ButtonDefaults.buttonColors(
-                containerColor = MaterialTheme.colorScheme.primary, // Cor corrigida para legibilidade
-                contentColor = MaterialTheme.colorScheme.onPrimary
+                containerColor = MaterialTheme.colorScheme.error, // Cor corrigida para legibilidade
+                contentColor = MaterialTheme.colorScheme.onSecondary
             ),
             modifier = Modifier.width(200.dp),
             shape = RoundedCornerShape(8.dp), // Aumentei o arredondamento para ficar mais moderno
             border = BorderStroke(
                 width = 1.dp,
-                color = MaterialTheme.colorScheme.outline
+                color = MaterialTheme.colorScheme.onSecondary
             ),
         ) {
             Text("Entrar")
