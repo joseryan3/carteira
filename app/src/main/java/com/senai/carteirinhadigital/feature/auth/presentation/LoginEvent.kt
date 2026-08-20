@@ -5,4 +5,5 @@ sealed interface LoginEvent {
     data class OnSenhaChange(val  value: String) : LoginEvent
     data object OnEntrarClick: LoginEvent
     data object OnNavigacaoRealizada: LoginEvent
+
 }
