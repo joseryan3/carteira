@@ -1,6 +1,6 @@
-package com.senai.carteirinhadigital.feature.auth.data.repository
+package com.senai.carteirinhadigital.feature.Login.data.repository
 
-import com.senai.carteirinhadigital.feature.auth.domain.model.UsuarioLogado
+import com.senai.carteirinhadigital.feature.Login.domain.model.UsuarioLogado
 import kotlinx.coroutines.delay
 
 class FakeLoginRepositoryImpl : LoginRepository {
@@ -8,14 +8,14 @@ class FakeLoginRepositoryImpl : LoginRepository {
         usuario: String,
         senha: String
     ): Result<UsuarioLogado> {
-        TODO("eduado gay")
+        TODO("josé gay")
 
         delay(timeMillis = 1500)
 
-        return if (usuario.equals("aluno") && senha.equals("123")){
+        return if (usuario.equals("eu") && senha.equals("1212")){
             Result.success(UsuarioLogado(
                 id = "12-3",
-                nome = "eduardo gay",
+                nome = "josé gay",
                 curso = "Denvolvimento de Sistemas",
                 turma = "2Dsevest-A",
                 token = "token-fake-vindo-do-sistema",
