@@ -1,6 +1,6 @@
-package com.senai.carteirinhadigital.feature.auth.presentation
+package com.senai.carteirinhadigital.feature.Login.presentation
 
-import com.senai.carteirinhadigital.feature.auth.domain.model.UsuarioLogado
+import com.senai.carteirinhadigital.feature.Login.domain.model.UsuarioLogado
 
 
 data class LoginUiState(
@@ -9,10 +9,6 @@ data class LoginUiState(
     val isLoading: Boolean = false,
     val errorMenssage: String? = null,
     val usuarioLogado: UsuarioLogado? = null
-
-
-
-
 
 ){
     val loginRealizado: Boolean

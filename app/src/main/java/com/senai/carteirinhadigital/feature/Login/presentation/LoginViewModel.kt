@@ -1,9 +1,9 @@
-package com.senai.carteirinhadigital.feature.auth.presentation
+package com.senai.carteirinhadigital.feature.Login.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.senai.carteirinhadigital.feature.auth.data.repository.FakeLoginRepositoryImpl
-import com.senai.carteirinhadigital.feature.auth.data.repository.LoginRepository
+import com.senai.carteirinhadigital.feature.Login.data.repository.FakeLoginRepositoryImpl
+import com.senai.carteirinhadigital.feature.Login.data.repository.LoginRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow

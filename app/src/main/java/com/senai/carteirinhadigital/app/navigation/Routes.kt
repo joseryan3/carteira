@@ -1,14 +1,16 @@
 package com.senai.carteirinhadigital.app.navigation
 
-import android.net.wifi.hotspot2.pps.HomeSp
+import kotlinx.serialization.Serializable
 
-object Routes {
+sealed class Routes (val route: String){
 
-    const val Login = "login"
+    @Serializable
+    data object Login : Routes("login")
+    @Serializable
+    data object Carteirinha : Routes("carteirinha")
+    @Serializable
+    data object HomeAluno : Routes("homeAluno")
+    @Serializable
+    data object UCAluno : Routes("ucAluno")
 
-    const val Carteirinha = "carteirinha"
-
-    const val TelaHome = "telahome"
-
-    const val unidadeCurricular ="unidade"
 }

@@ -1,4 +1,4 @@
-package com.senai.carteirinhadigital.feature.auth.presentation
+package com.senai.carteirinhadigital.feature.Login.presentation
 
 sealed interface LoginEvent {
     data class OnUsuarioioChange(val value: String) : LoginEvent

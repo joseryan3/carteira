@@ -1,4 +1,4 @@
-package com.senai.carteirinhadigital.feature.auth.domain.model
+package com.senai.carteirinhadigital.feature.Login.domain.model
 
 data class UsuarioLogado(
     val id: String,

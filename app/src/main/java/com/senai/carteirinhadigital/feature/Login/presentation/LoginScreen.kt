@@ -1,4 +1,4 @@
-package com.senai.carteirinhadigital.feature.auth.presentation
+package com.senai.carteirinhadigital.feature.Login.presentation
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
@@ -7,7 +7,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.senai.carteirinhadigital.feature.auth.domain.model.UsuarioLogado
+import com.senai.carteirinhadigital.feature.Login.domain.model.UsuarioLogado
 
 @Composable
 fun LoginScreen(
