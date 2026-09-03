@@ -17,6 +17,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
@@ -53,7 +54,22 @@ fun LoginContent(
                 onEvent(LoginEvent.OnSenhaChange(value))
             },
             label = {Text(text = "Senha")}
+
+
+
         )
+
+
+        uiState.errorMenssage?.let {
+                error ->
+            Text(
+                text = error,
+                textAlign = TextAlign.Center,
+                color = MaterialTheme.colorScheme.error,
+                modifier = Modifier.fillMaxWidth(0.80f)
+            )
+        }
+
         Button(
             onClick = {
                 onEvent(LoginEvent.OnEntrarClick)
@@ -77,6 +93,7 @@ fun LoginContent(
                 )
             }else{
                 Text("Entrar")
+
             }
         }
     }

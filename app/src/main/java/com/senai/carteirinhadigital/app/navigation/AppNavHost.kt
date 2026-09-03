@@ -14,12 +14,14 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.senai.carteirinhadigital.app.session.SessionViewModel
 import com.senai.carteirinhadigital.feature.Login.presentation.LoginScreen
+import com.senai.carteirinhadigital.feature.carterinha.presentation.screen.CarterinhaScreen
 import com.senai.carteirinhadigital.feature.home.presentation.screen.HomeScreen
 import com.senai.carteirinhadigital.feature.unidadeCurricular.presentation.screen.UnidadeCurricularScreen
 
 
 @Composable
 fun AppNavHost(
+
     navController: NavHostController,
     sessionViewModel: SessionViewModel= viewModel()
 ) {
@@ -39,7 +41,7 @@ fun AppNavHost(
         }
         composable(Routes.Carteirinha.route) {
             Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                CarteirinhaScreen(
+                CarterinhaScreen(
                     modifier = Modifier.padding(innerPadding)
                 )
             }
@@ -63,15 +65,9 @@ fun AppNavHost(
         composable(Routes.UCAluno.route) {
             Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                 UnidadeCurricularScreen(
-                    modifier = Modifier.padding(innerPadding),
-                    navController = TODO()
+                    modifier = Modifier.padding(innerPadding)
                 )
             }
         }
     }
-}
-
-@Composable
-fun CarteirinhaScreen(modifier: Modifier) {
-    TODO("Not yet implemented")
 }

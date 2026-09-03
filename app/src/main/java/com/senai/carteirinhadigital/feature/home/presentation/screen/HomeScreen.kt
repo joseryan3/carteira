@@ -82,7 +82,7 @@ fun HomeScreen(
 
         Button(
             onClick = {
-                navController.navigate(Routes.Carteirinha)
+                navController.navigate(Routes.Carteirinha.route)
             }
         ) {
             Text("Carteirinha")
@@ -92,7 +92,7 @@ fun HomeScreen(
 
         Button(
             onClick = {
-                navController.navigate(Routes.UCAluno)
+                navController.navigate(Routes.UCAluno.route)
             }
         ) {
             Text("Unidade Curricular")

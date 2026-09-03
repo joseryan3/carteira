@@ -6,10 +6,11 @@ import com.senai.carteirinhadigital.app.navigation.AppNavHost
 import com.senai.carteirinhadigital.core.designesystem.component.theme.CarteirinhaDigitalTheme
 @Composable
 fun App() {
-    CarteirinhaDigitalTheme{
+    CarteirinhaDigitalTheme() {
         val navController = rememberNavController()
         AppNavHost(
             navController = navController,
         )
     }
 }
+
