@@ -20,14 +20,15 @@ import com.senai.carteirinhadigital.core.designesystem.component.theme.Carteirin
 
 
 class MainActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        val carteirinhaApplication = application as CarteirinhaApplication
         setContent {
-            CarteirinhaDigitalTheme {
-                App()
-            }
+            App(
+                container = carteirinhaApplication.container
+            )
         }
     }
 }
-

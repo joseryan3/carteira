@@ -114,7 +114,8 @@ fun HomeScreenPreview() {
             curso = "Desenvolvimento de Sistemas",
             turma = "2DEVEST-A",
             token = "kandioanda",
-            trabalho = "jhhhhhhh"
+            trabalho = "jhhhhhhh",
+            matricula = "2972979843"
 
         )
     )

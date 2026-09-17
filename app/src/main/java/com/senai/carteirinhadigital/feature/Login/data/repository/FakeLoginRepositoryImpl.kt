@@ -1,6 +1,7 @@
 package com.senai.carteirinhadigital.feature.Login.data.repository
 
 import com.senai.carteirinhadigital.feature.Login.domain.model.UsuarioLogado
+import com.senai.carteirinhadigital.feature.Login.domain.repository.LoginRepository
 import kotlinx.coroutines.delay
 
 class FakeLoginRepositoryImpl : LoginRepository {
@@ -21,7 +22,9 @@ class FakeLoginRepositoryImpl : LoginRepository {
                     turma = "2Dsevest-A",
                     token = "token-fake-vindo-do-sistema",
                     trabalho = "Stripicismo + adorador de pirocas alpha + rato de piroca + chupador profissional + adorador de cuzinhos de machos + gotico rabudo    ",
-                )
+                    matricula = "972427492"
+                    )
+
             )
         }else{
             Result.failure(

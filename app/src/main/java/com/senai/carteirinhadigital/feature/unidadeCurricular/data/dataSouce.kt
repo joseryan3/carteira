@@ -1,4 +1,4 @@
-package com.senai.carteirinhadigital.feature.unidadeCurricular.presentation.data
+package com.senai.carteirinhadigital.feature.unidadeCurricular.data
 
 import com.senai.carteirinhadigital.feature.unidadeCurricular.domain.model.UnidadeCurricular
 import com.senai.carteirinhadigital.feature.unidadeCurricular.presentation.component.UnidadeCurricularCard

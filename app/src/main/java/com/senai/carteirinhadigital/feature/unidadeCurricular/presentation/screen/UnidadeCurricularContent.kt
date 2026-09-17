@@ -35,7 +35,7 @@ fun UnidadeCurricularContent(
         uiState.isLoading ->{
 
         }
-        uiState.errorMensage != null ->{
+        uiState.errorMessage != null ->{
             Column(
                 modifier = modifier
                     .fillMaxSize()
@@ -44,18 +44,18 @@ fun UnidadeCurricularContent(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Text(
-                    text = uiState.errorMensage,
+                    text = uiState.errorMessage,
                     color = MaterialTheme.colorScheme.error
                 )
                 Button(
                     modifier = Modifier.padding(16.dp),
-                    onClick = { viewModel.carregar(token)}
+                    onClick = { viewModel.carregar()}
                 ) {
                     Text(text = "Tentar Novamente")
                 }
             }
         }
-        uiState.listaUnidades.isEmpty() ->{
+        uiState.listaUnidadesCurriculares.isEmpty() ->{
             Box(
                 modifier = modifier.fillMaxSize(),
                 contentAlignment = Alignment.Center
@@ -76,7 +76,7 @@ fun UnidadeCurricularContent(
 
 
 
-        items(uiState.listaUnidades) { unidadeCurricular ->
+        items(uiState.listaUnidadesCurriculares) { unidadeCurricular ->
             UnidadeCurricularCard(unidadeCurricular = unidadeCurricular)
         }
     }

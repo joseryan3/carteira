@@ -32,10 +32,13 @@ import androidx.compose.ui.unit.sp
 import com.senai.carteirinhadigital.QrCode
 import com.senai.carteirinhadigital.R
 import com.senai.carteirinhadigital.core.designesystem.component.theme.CarteirinhaDigitalTheme
+import com.senai.carteirinhadigital.feature.Login.domain.model.UsuarioLogado
 
 @Composable
-fun CarterinhaScreen(modifier: Modifier = Modifier,
-                     onBackClick: () -> Unit = {}) {
+fun CarterinhaScreen(
+    usuarioLogado: UsuarioLogado,
+    modifier: Modifier = Modifier,
+    onBackClick: () -> Unit = {}) {
 
     Box(modifier = Modifier.fillMaxSize()) {
 
@@ -125,15 +128,4 @@ fun CarterinhaScreen(modifier: Modifier = Modifier,
         )
     }
 }
-
-
-
-@Preview(showSystemUi = true)
-@Composable
-fun CarteirinhaDigitalAppPreview() {
-    CarteirinhaDigitalTheme {
-        CarterinhaScreen()
-    }
-}
-
 

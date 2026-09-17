@@ -4,6 +4,7 @@ import com.senai.carteirinhadigital.feature.Login.data.remote.dto.ErrorResponseD
 import com.senai.carteirinhadigital.feature.Login.data.remote.dto.LoginRequestDto
 import com.senai.carteirinhadigital.feature.Login.data.remote.service.AuthApi
 import com.senai.carteirinhadigital.feature.Login.domain.model.UsuarioLogado
+import com.senai.carteirinhadigital.feature.Login.domain.repository.LoginRepository
 import kotlinx.serialization.json.Json
 import okio.IOException
 import retrofit2.HttpException
@@ -21,7 +22,8 @@ class ApiAuthRepositoryImpl(
                 curso = response.curso,
                 turma = response.turma,
                 token = response.token,
-                trabalho = response.token
+                trabalho = response.token,
+                matricula = response.token
             )
         }.recoverCatching { throwable ->
             throw mapToDomainError(throwable)

@@ -1,4 +1,4 @@
-package com.senai.carteirinhadigital.feature.Login.presentation
+package com.senai.carteirinhadigital.feature.Login.presentation.screen
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement
@@ -20,6 +20,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.senai.carteirinhadigital.feature.Login.presentation.LoginEvent
+import com.senai.carteirinhadigital.feature.Login.presentation.LoginUiState
 
 
 @Composable

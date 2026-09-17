@@ -3,8 +3,7 @@ package com.senai.carteirinhadigital.feature.Login.presentation
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.senai.carteirinhadigital.feature.Login.data.repository.FakeLoginRepositoryImpl
-import com.senai.carteirinhadigital.feature.Login.data.repository.LoginRepository
-import com.senai.carteirinhadigital.feature.Login.data.repository.LoginRepositoryProvider
+import com.senai.carteirinhadigital.feature.Login.domain.repository.LoginRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -12,7 +11,7 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
 class LoginViewModel(
-    private val repository: LoginRepository = LoginRepositoryProvider.provide()
+    private val repository: LoginRepository
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(LoginUiState())

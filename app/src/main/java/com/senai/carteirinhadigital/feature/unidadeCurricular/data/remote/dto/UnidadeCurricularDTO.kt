@@ -1,4 +1,4 @@
-package com.senai.carteirinhadigital.feature.unidadeCurricular.presentation.data.remote.dto
+package com.senai.carteirinhadigital.feature.unidadeCurricular.data.remote.dto
 
 import com.senai.carteirinhadigital.feature.unidadeCurricular.domain.model.UnidadeCurricular
 
