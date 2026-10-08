@@ -1,35 +1,74 @@
 package com.senai.carteirinhadigital.feature.Login.data.repository
 
+import com.senai.carteirinhadigital.feature.Login.domain.model.PerfilAcesso
 import com.senai.carteirinhadigital.feature.Login.domain.model.UsuarioLogado
 import com.senai.carteirinhadigital.feature.Login.domain.repository.LoginRepository
 import kotlinx.coroutines.delay
 
-class FakeLoginRepositoryImpl : LoginRepository {
+class FakeAuthRepository : LoginRepository {
+
     override suspend fun login(
-        usuario: String,
+        login: String,
         senha: String
     ): Result<UsuarioLogado> {
 
+        delay(1500)
 
-        delay(timeMillis = 1500)
+        if (senha != "123") {
 
-        return if (usuario.equals("eu") && senha.equals("1212")){
-            Result.success(
-                UsuarioLogado(
-                    id = "12-3",
-                    nome = "eduardo gay",
-                    curso = "Denvolvimento de Sistemas",
-                    turma = "2Dsevest-A",
-                    token = "token-fake-vindo-do-sistema",
-                    trabalho = "Stripicismo + adorador de pirocas alpha + rato de piroca + chupador profissional + adorador de cuzinhos de machos + gotico rabudo    ",
-                    matricula = "972427492"
+            return Result.failure(
+                IllegalArgumentException(
+                    "Login ou senha inválidos"
+                )
+            )
+        }
+
+        return when {
+
+            login.equals(
+                "aluno",
+                ignoreCase = true
+            ) -> {
+
+                Result.success(
+                    UsuarioLogado(
+                        id = "1",
+                        nome = "Rafael Costa",
+                        matricula = "2026000001",
+                        perfil = PerfilAcesso.ALUNO,
+                        curso = "Desenvolvimento de Sistemas",
+                        turma = "2DEVEST-A",
+                        token = "token-fake-aluno"
                     )
+                )
+            }
 
-            )
-        }else{
-            Result.failure(
-                IllegalArgumentException("Login ou senha incorreto")
-            )
+            login.equals(
+                "professor",
+                ignoreCase = true
+            ) -> {
+
+                Result.success(
+                    UsuarioLogado(
+                        id = "2",
+                        nome = "Professor Modelo",
+                        matricula = "PROF20260001",
+                        perfil = PerfilAcesso.PROFESSOR,
+                        curso = "",
+                        turma = "",
+                        token = "token-fake-professor"
+                    )
+                )
+            }
+
+            else -> {
+
+                Result.failure(
+                    IllegalArgumentException(
+                        "Login ou senha inválidos"
+                    )
+                )
+            }
         }
     }
 }
